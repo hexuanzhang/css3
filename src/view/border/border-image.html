@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>border-image</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			.border-image{
+			    width: 140px;
+			    height: 140px;
+			    border: 70px solid blue;
+			    -webkit-border-image: url(../../files/images/border/border-image.jpg);
+			    -moz-border-image: url(../../files/images/border/border-image.jpg);
+			    border-image-source: url(../../files/images/border/border-image.jpg);
+			    border-image-slice: 70;
+			    line-height: 140px;
+			    text-align: center;
+			    margin: 70px;
+			}
+			.stretch {
+				border-image-repeat: stretch;
+			}
+			.repeat {
+				border-image-repeat: repeat;
+			}
+			.round {
+				border-image-repeat: round;
+			}
+			.space {
+				border-image-repeat: space;
+			}
+			.slice-all {
+				border-image-slice: 100%;
+			}
+			.fill {
+				border-image-slice: 70 fill;
+			}
+			.width-small {
+				border-image-width: 35px;
+			}
+			.outset {
+				border-image-outset: 70px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>border-image-repeat</h3>
+		<div id="border-image" class="border-image stretch">stretch</div><br>
+		<div id="border-image" class="border-image repeat">repeat</div><br>
+		<div id="border-image" class="border-image round">round</div><br>
+		<div id="border-image" class="border-image space">space</div><br>
+		<br>
+		
+		<h3>border-image-slice</h3>
+		<div id="border-image" class="border-image round slice-all">slice100%</div><br>
+		<div id="border-image" class="border-image round fill">fill</div><br>
+
+		<h3>border-image-width</h3>
+		<div id="border-image" class="border-image round width-small">slice100%</div><br>
+
+		<h3>border-image-outset</h3>
+		<div id="border-image" class="border-image round outset">outset</div><br>
+
+	</body>
+</html>

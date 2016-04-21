@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>border-shadow</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			div {
+				width: 200px;
+				height: 100px;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				margin: 20px;
+			}
+			.box-shadow{
+				-webkit-box-shadow: 1px 1px 5px 5px #ddd;
+				box-shadow: 1px 1px 5px 5px #ddd;:
+			}
+			.top {
+				-webkit-box-shadow: 0 -2px 5px -3px blue;
+				box-shadow: 0 -2px 5px -3px blue;
+			}
+			.right {
+				-webkit-box-shadow: 2px 0 5px -3px blue;
+				box-shadow: 2px 0 5px -3px blue;
+			}
+			.bottom {
+				-webkit-box-shadow: 0 2px 5px -3px blue;
+				box-shadow: 0 2px 5px -3px blue;
+			}
+			.left{
+				-webkit-box-shadow: -2px 0 5px -3px blue;
+				box-shadow: -2px 0 5px -3px blue;
+			}
+			.box-shadow-2{
+				-webkit-box-shadow: 0 0 0 10px yellow;
+				box-shadow: 0 0 0 10px blue;
+			}
+			.border{
+				border: 10px solid yellow;
+				border-radius: 0;
+			}
+			.box-shadow-border{
+				border: none;
+				border-radius: 0;
+				-webkit-box-shadow: 0 0 0 10px yellow;
+				box-shadow: 0 0 0 10px yellow;
+			}
+			.box-shadow-inset{
+				-webkit-box-shadow: inset 1px 1px 5px 5px #06C;
+				box-shadow: inset 1px 1px 5px 5px #06C;
+			}
+			.outer{
+				width: auto;
+				height: auto;
+				display: inline-block;
+				box-shadow: inset 5px 5px 10px #06C;
+			}
+			img{
+				position: relative;
+				z-index: -1;
+				vertical-align: top;
+			}
+			.box-shadow-more{
+				-webkit-box-shadow: -5px 0 5px red, 0 5px 5px blue, 5px 0 5px green, 0 -5px 5px orange;
+				box-shadow: -5px 0 5px red, 0 5px 5px blue, 5px 0 5px green, 0 -5px 5px orange;
+			}
+			.box-shadow-borders{
+				-webkit-box-shadow: 0 0 0 1px red, 
+				    0 0 0 5px blue,
+				    0 0 0 8px green,
+				    0 0 0 12px yellow,
+				    0 0 0 16px orange,
+				    0 0 0 20px #06c,
+				    0 0 0 24px lime;
+				box-shadow: 0 0 0 1px red, 
+				    0 0 0 5px blue,
+				    0 0 0 8px green,
+				    0 0 0 12px yellow,
+				    0 0 0 16px orange,
+				    0 0 0 20px #06c,
+				    0 0 0 24px lime;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box-shadow"></div>
+
+		<p>(1)只设置阴影模糊半径和阴影颜色</p>
+		<div class="top"></div>
+		<div class="right"></div>
+		<div class="bottom"></div>
+		<div class="left"></div>
+
+		<p>(2)只设置扩展半径和阴影颜色</p>
+		<div class="box-shadow-2"></div>
+
+		<p>模拟边框的效果</p>
+		<div class="box-shadow-border"></div>
+		<div class="border"></div>
+
+		<p>(3)内阴影</p>
+		<div class="box-shadow-inset"></div>
+		<p>图片内阴影效果</p>
+		<div class="outer">
+			<img src="../../files/images/border/border-radius.jpg" alt="">
+		</div>
+
+		<p>(4)多层阴影</p>
+		<div class="box-shadow-more"></div>
+		<p>多色边框</p>
+		<div class="box-shadow-borders"></div>
+	</body>
+</html>

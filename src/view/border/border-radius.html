@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>border-radius</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			div{
+				width: 350px;
+				height: 100px;
+				border: 10px solid orange;
+				behavior: url(../../files/ie-css3.htc);
+			}
+			.border-radius {
+				border-radius: 60px 40px 30px 20px / 30px 20px 10px 5px;
+			}
+			.radius30 {
+				border: 30px solid orange;
+				border-radius: 30px;
+			}
+			.radius35 {
+				border: 30px solid orange;
+				border-radius: 35px;
+			}
+			.radius100 {
+				border-width: 20px 5px 30px 60px;
+				border-color: orange red green blue;
+				border-radius: 100px;
+			}
+			img {
+				border: 5px solid red;
+				border-radius: 10px;
+			}
+			table {
+				margin: 10px;
+				border: 5px solid orange;
+				border-radius: 10px;
+			}
+			.tablel {
+				border-collapse: collapse;
+			}
+			.table2 {
+				border-collapse: separate;
+			}
+			.circle {
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				border-radius: 50%;
+			}
+			.semicircle {
+				background-color: orange;
+				margin: 30px;
+				border: none;
+			}
+			.top {
+				width: 100px; /* 宽度为高度的2倍 */
+				height: 50px;
+				border-radius: 50px 50px 0 0 ; /* 圆角半径为高度的值 */
+			}
+			.right {
+				height: 100px ; /* 高度为宽度的2倍 */
+				width: 50px;
+				border-radius: 0 50px 50px 0; /* 圆角半径为宽度的值 */
+			}
+			.bottom {
+				width: 100px ; /* 宽度为高度的2倍 */
+				height: 50px;
+				border-radius: 0 0 50px 50px; /* 圆角半径为高度的值 */
+			}
+			.left {
+				width: 50px;
+				height: 100px; /* 高度为宽度的2倍 */
+				border-radius: 50px 0 0 50px;
+			}
+			.quarterCircle {
+				background-color: orange;
+				margin: 30px;
+				border: none;
+			}
+			.quarterCircle-top {
+				width: 100px;
+				height: 100px;
+				border-radius: 100px 0 0 0;
+			}
+			.quarterCircle-right {
+				width: 100px;
+				height: 100px;
+				border-radius: 0 100px 0 0;
+			}
+			.quarterCircle-bottom {
+				width: 100px;
+				height: 100px;
+				border-radius: 0 0 100px 0;
+			}
+			.quarterCircle-left {
+				width: 100px;
+				height: 100px;
+				border-radius: 0 0 0 100px;
+			}
+			.oval {
+				background-color: orange;
+				margin: 30px;
+				border: none;
+			}
+			.hov {
+				width: 100px;
+				height: 50px;
+				border-radius: 100px/50px;
+			}
+			.ver {
+				width: 50px;
+				height: 100px;
+				border-radius: 50px/100px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="border-radius"></div><br>
+
+		当border-radius半径值小于或等于border的厚度时，元素边框内部就不具有圆角效果
+		因为border-radius 内边半径(内径)等于外边半径(外径)减去对应的边框宽度。<br>
+		1.border-radius 半径值与border-width 值等于或小于0 时，元素内角为直角，<br>
+		2.border-radius 半径值与border-width 值大于0 时，元素内角具有圆角效果，其圆角半
+		径为它们的差值。差值越大，圆角幅度也大，反之圆角幅度也小，
+		<div class="radius30"></div><br>
+		<div class="radius35"></div><br>
+		
+		元素相邻边有不同的宽度，这个角将会从宽的边平滑过渡到窄的一边，其中一条边甚至可以是0 ，元素相邻转角是由大向小转。<br>
+		当元素相邻两条边颜色和线条样式不同时两条相邻边颜色和样式转变的中心点是在一个和两边宽度成正比的角上。<br>如果两条边宽度相同，这个临界点应该在一个45 度角上，如果一条边是另外一条边的2 倍，这个临界点就在一个30 度角上。<br>界定这个转变的线就是连接在内外曲线上的两个点的直线
+		<div class="radius100"></div><br>
+
+		<img src="../../files/images/border/border-radius.jpg" height="220" width="308" alt="">
+
+		<table class="tablel">
+			<tr>
+				<td>border-collapse : collapse</td>
+			</tr>
+		</table>
+		<table class="table2">
+			<tr>
+				<td>border-collapse: separate</td>
+			</tr>
+		</table><br>
+
+		实战体验:制作特殊图形
+		<div class="circle"></div>
+		<div class="semicircle top"></div>
+		<div class="semicircle right"></div>
+		<div class="semicircle bottom"></div>
+		<div class="semicircle left"></div>
+
+		<div class="quarterCircle quarterCircle-top"></div>
+		<div class="quarterCircle quarterCircle-right"></div>
+		<div class="quarterCircle quarterCircle-bottom"></div>
+		<div class="quarterCircle quarterCircle-left"></div>
+
+		<div class="oval hov"></div>
+		<div class="oval ver"></div>
+	</body>
+</html>
