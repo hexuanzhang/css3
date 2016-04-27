@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>RGBA</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			li{
+				list-style: none;
+			}
+			ul{
+				overflow: hidden;
+			}
+			li.opacity{
+				float: left;
+				width: 50px;
+				height: 50px;
+			}
+			li.opacity1 {
+				background: rgb(255,255,0);
+				opacity: 1;
+				filter:alpha(opacity=100);
+			}
+			li.opacity2 {
+				background: rgb(255,255,0);
+				opacity: 0.8;
+				filter:alpha(opacity=80);
+			}
+			li.opacity3 {
+				background: rgb(255,255,0);
+				opacity: 0.6;
+				filter:alpha(opacity=60);
+			}
+			li.opacity4 {
+				background: rgb(255,255,0);
+				opacity: 0.4;
+				filter:alpha(opacity=40);
+			}
+			li.opacity5 {
+				background: rgb(255,255,0);
+				opacity: 0.2;
+				filter:alpha(opacity=20);
+			}
+			li.opacity6 {
+				background: rgb(255,255,0);
+				opacity: 0;
+				filter:alpha(opacity=0);
+			}
+			li.rgba {
+				float: left;
+				width: 50px;
+				height: 50px;
+			}
+			li.rgba1 {
+				background: rgba(255,255,0,1);
+			}
+			li.rgba2 {
+				background: rgba(255,255,0,0.8);
+			}
+			li.rgba3 {
+				background: rgba(255,255,0,0.6);
+			}
+			li.rgba4 {
+				background: rgba(255,255,0,0.4);
+			}
+			li.rgba5 {
+				background: rgba(255,255,0,0.2);
+			}
+			li.rgba6 {
+				background: rgba(255,255,0,0);
+			}
+			.norgba_color {
+			  	color: rgb(255, 0, 0);
+			}  
+			.rgba_color {
+			  	color: rgb(255, 0, 0);
+			  	color: rgba(255, 0, 0,0.5);
+			}
+			.norgba_border_color {
+			   border:5px solid rgb(255,0,0);
+			   width: 200px;
+			}  
+			.rgba_border_color {
+			   border:5px solid rgb(255,0,0);
+			   border:5px solid rgba(255,0,0,0.5);
+			   width: 200px;
+			}
+			.norgba_text_shadow {
+			   text-shadow : 0 2px 1px rgb(255,0,0);
+			}
+			.rgba_text_shadow {
+			   text-shadow : 0 2px 1px rgb(255,0,0);
+			   text-shadow : 0 2px 1px rgba(255,0,0,0.3);
+			}
+			.norgba_box_shadow {
+				border: 5px solid green;
+				width: 200px;
+				-webkit-box-shadow: 0 2px 2px rgb(255,0,0);
+				-moz-box-shadow: 0 2px 2px rgb(255,0,0);
+				box-shadow: 0 2px 2px rgb(255,0,0);
+			}
+			.rgba_box_shadow {
+				border: 5px solid green;
+				width: 200px;
+				-webkit-box-shadow: 0 2px 2px rgba(255,0,0,0.6);
+				-moz-box-shadow: 0 2px 2px rgba(255,0,0,0.6);
+				box-shadow: 0 2px 2px rgba(255,0,0,0.6);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="example-opacity">
+			<p>Opacity效果</p>
+			<ul>
+				<li class="opacity opacity1">100%</li>
+				<li class="opacity opacity2">80%</li>
+				<li class="opacity opacity3">60%</li>
+				<li class="opacity opacity4">40%</li>
+				<li class="opacity opacity5">20%</li>
+				<li class="opacity opacity6">0</li>
+			</ul>
+			<p>CSS3的RGBA效果</p>
+			<ul>
+				<li class="rgba rgba1">1</li>
+				<li class="rgba rgba2">0.8</li>
+				<li class="rgba rgba3">0.6</li>
+				<li class="rgba rgba4">0.4</li>
+				<li class="rgba rgba5">0.2</li>
+				<li class="rgba rgba6">0</li>
+			</ul>
+		</div>
+
+		<div>
+			<h3>rgba应用场景</h3>
+			<p>1.改变字体颜色color</p>
+			<div>
+		  		<p class="norgba_color">用rgba改变字体颜色</p>
+				<p class="rgba_color">用rgba改变字体颜色</p>
+			</div>
+			<p>2.改变边框色border-color</p>
+			<div>
+				<p class="norgba_border_color">用rgba改变边框颜色</p>
+				<p class="rgba_border_color">用rgba改变边框颜色</p>
+			</div>
+			<p>3.改变字体阴影色text-shadow</p>
+			<div>
+				<p class="norgba_text_shadow">用rgba改变我的字体阴影颜色</p>
+				<p class="rgba_text_shadow">用rgba改变我的字体阴影颜色</p>
+			</div>
+			<p>4.改变边框阴影色box-shadow</p>
+			<div>
+				<p class="norgba_box_shadow">用rgba改变我的边框阴影颜色</p>
+ 				<p class="rgba_box_shadow">用rgba改变我的边框阴影颜色</p>
+			</div>
+		</div>
+	</body>
+</html>

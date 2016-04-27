@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>opacity对子元素的影响</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			.container {
+				width: 200px;
+				height: 100px;
+				border: 1px solid #ccc;
+				background: red;
+				position: relative;
+			}
+			.opacity {
+				background: black;
+				opacity: 0.5;
+				filter:alpha(opacity=50);
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			.text {
+				padding: 5px 10px;
+				color: white;
+			}
+			.content {
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 10;
+			}
+			.rgba_content {
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: rgba(0, 0, 0,0.5);
+			}
+			.fb_color_content {
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: rgba(0, 0, 0,0.5);
+				filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+			}
+			/* IE9 hack 解决IE9下双层叠加问题*/
+			:root .fb_color_content {
+				filter:none;
+			}
+			E:{
+				background: rgba(0, 0, 0,0.5);
+				filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
+				*zoom: 1;
+			}
+			:root E {
+				filter:none;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>opacity对子元素的影响</h3>
+		<div class="container">
+			<div class="opacity">
+				<div>
+					<p class="text">子元素也变透明了</p>
+				</div>
+			</div>
+		</div>
+
+		<h3>解决opacity对子元素的影响</h3>
+		<h4>方案一：把透明背景层单独放到另外的容器上</h4>
+		<div class="container">
+			<div class="opacity"></div>
+			<div class="content">
+				<p class="text">子元素没变透明</p>
+			</div>
+		</div>
+		<h4>方案二：通过rgba实现(IE9+)</h4>
+		<div class="container">
+			<div class="rgba_content">
+				<p class="text">子元素没变透明</p>
+			</div>
+		</div>
+		<h4>方案三：fallback color--IE9+使用rgba，IE9以下使用备份色</h4>
+		<div class="container">
+			<div class="fb_color_content">
+				<p class="text">子元素没变透明</p>
+			</div>
+		</div>
+	</body>
+</html>
