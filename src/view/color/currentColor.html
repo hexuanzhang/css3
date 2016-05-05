@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>currentColor</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            a{
+                text-decoration: none;
+            }
+            div{
+                color: blue;
+                margin-bottom: 10px;
+            }
+            .demo_1{0
+                border: 1px solid;
+            }
+            .demo_2{
+                border: 1px solid currentColor;
+                /*background-color: currentColor; */
+            }
+            .icon {
+                display: inline-block;
+                width: 16px; 
+                height: 20px;
+                background-image: url("../../files/images/color/sprite_icons.png");
+                background-color: currentColor; /* 该颜色控制图标的颜色 */
+            }
+            .icon1 { 
+                background-position: 0 0; 
+            }
+            .icon2 { 
+                background-position: -20px 0; 
+            }
+            .icon3 { 
+                background-position: -40px 0; 
+            }
+            .icon4 { 
+                background-position: -60px 0; 
+            }
+            .link { 
+                margin-right: 15px; 
+            }
+            .link:hover { 
+                color: #333; /* 虽然改变的是文字颜色，但是图标颜色也一起变化了 */
+            }
+        </style>
+    </head>
+    <body>
+        <p>兼容性：<a href="http://caniuse.com/#search=current" target="_blank">IE9+浏览器</a></p>
+        <p>说明:需要使用颜色值的地方，都可以使用currentColor替换，如背景色–background-color, 渐变色–gradient, 盒阴影–box-shadow, SVG的填充色–fill等。</p>
+        <p>bug:iOS(iOS8)Safari浏览器中，伪元素hover时，background:currentColor背景色不会跟着变</p>
+        <div class="demo_1">兼容IE6+</div>
+        <div class="demo_2">兼容IE9+</div>
+        <div class="demo_icon">
+            <a href="##" class="link">
+                <i class="icon icon1"></i>返回
+            </a>
+            <a href="##" class="link">
+                <i class="icon icon2"></i>刷新
+            </a>
+            <a href="##" class="link">
+                <i class="icon icon3"></i>收藏
+            </a>
+            <a href="##" class="link">
+                <i class="icon icon4"></i>展开图片
+            </a>
+        </div>
+    </body>
+</html>
