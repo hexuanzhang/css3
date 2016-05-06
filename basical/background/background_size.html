@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>background-size</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			div{
+				width: 800px;
+				height: 450px;
+				background-image: url("./img/background_size.jpg");
+				background-repeat: no-repeat;
+				margin-bottom: 10px;
+			}
+			.demo_1{
+				background-size: 50% 50%;
+			}
+			.demo_2{
+				background-size: 100% 100%;
+			}
+			.demo_3{
+				background-size: 800px 450px;
+			}
+			.demo_4{
+				background-size: 400px 275px;
+			}
+			.demo_5{
+				background-size: contain;
+			}
+			.demo_6{
+				height: 800px;
+				background-size: contain;
+			}
+			.demo_7{
+				height: 300px;
+				background-size: contain;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>不使用background-size</h3>
+		<div></div>
+		<h3>background-size采用百分比：</h3>
+		<p>w'image = 百分比 × w(viewport)</p>
+		<p>h'image = 百分比 × h(viewport)</p>
+		<div class="demo_1">50% ×50%</div>
+		<div class="demo_2">100% ×100%</div>
+		<h3>background-size采用数值：</h3>
+		<div class="demo_3">800px ×450px</div>
+		<div class="demo_4">400px ×275px</div>
+		<h3>background-size采用contain：</h3>
+		<div class="demo_5"></div>
+		<div class="demo_6"></div>
+		<div class="demo_7"></div>
+		<div class="demo_8"></div>
+	</body>
+</html>
