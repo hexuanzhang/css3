@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>background-origin</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            h3
+            {
+                padding-left: 30px;
+            }
+            div
+            {
+                width : 300px;
+                height: 200px;
+                border: 20px solid rgba(0, 0, 0, .3);
+                background: orange url("./img/bg_origin.png") no-repeat left top;
+                padding: 20px;
+                margin: 30px;
+            }
+            .bg_origin_padding
+            {
+                background-origin: padding-box;
+            }
+            .bg_origin_border
+            {
+                background-origin: border-box;
+            }
+            .bg_origin_content
+            {
+                background-origin: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>默认padding-box</h3>
+        <div></div>
+        <h3>padding-box</h3>
+        <div class="bg_origin_padding"></div>
+        <h3>border-box</h3>
+        <div class="bg_origin_border"></div>
+        <h3>background-origin: content-box</h3>
+        <div class="bg_origin_content"></div>
+    </body>
+</html>
