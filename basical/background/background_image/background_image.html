@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>background-image</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            div
+            {
+                font-size: 25px;
+                line-height: 1.5;
+
+                width: 240px;
+                margin-bottom: 10px;
+                padding: 80px 60px;
+
+                text-align: center;
+
+                color: #f36;
+                border: 20px solid rgba(104, 104, 142,.5);
+                border-radius: 10px;
+            }
+            .bg_img_demo
+            {
+                background: url('./img/bg-tl.png') no-repeat left top,url('./img/bg-tr.png') no-repeat right top,url('./img/bg-bl.png') no-repeat left bottom,url('./img/bg-br.png') no-repeat right bottom,url('./img/bg-repeat.png') repeat left top;
+                -webkit-background-clip: border-box;
+                   -moz-background-clip: border-box;
+                        background-clip: border-box;
+            }
+            .bg_img_demo2
+            {
+                background: url('./img/bg-tl.png'), url('./img/bg-tr.png'), url('./img/bg-bl.png'), url('./img/bg-br.png'), url('./img/bg-repeat.png');
+                background-repeat: no-repeat;
+                background-position: left top, right top, left bottom, right bottom, left top;
+                -webkit-background-clip: border-box;
+                   -moz-background-clip: border-box;
+                        background-clip: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg_img_demo"></div>
+        <div class="bg_img_demo2"></div>
+    </body>
+</html>

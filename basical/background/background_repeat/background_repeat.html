@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>background-repeat</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            h4
+            {
+                color: red;
+            }
+            div
+            {
+
+                width: 500px;
+                height: 500px;
+                padding: 20px;
+                
+                border: 1px solid #ccc;
+                background-image: url("./img/bg_repeat.png");
+            }
+            .bg_repeat_round
+            {
+                background-repeat: round;
+            }
+            .bg_repeat_space
+            {
+                background-repeat: space;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>background-repeat默认值repeat</h3>
+        <div></div>
+        <h3>background-repeat:round 背景图在水平和垂直方向平铺且不裁剪.但背景图片可能被拉伸或缩短 (不裁剪, 可以伸缩,有可能拉伸)</h3>
+        <h4>firefox不支持</h4>
+        <div class="bg_repeat_round"></div>
+        <h3>background-repeat:space 背景图在水平和垂直方向平铺且不裁剪.两端对齐，中间填补空白，背景图大小不变 (不裁剪,两端对齐)</h3>
+        <h4>firefox不支持</h4>
+        <div class="bg_repeat_space"></div>
+    </body>
+</html>
