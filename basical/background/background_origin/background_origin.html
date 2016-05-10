@@ -8,36 +8,42 @@
         <meta name="keywords" content="">
         <link href="" rel="stylesheet">
         <style>
-            h3
-            {
-                padding-left: 30px;
-            }
-            div
-            {
-                width : 300px;
-                height: 200px;
-                border: 20px solid rgba(0, 0, 0, .3);
-                background: orange url("./img/bg_origin.png") no-repeat left top;
-                padding: 20px;
-                margin: 30px;
-            }
-            .bg_origin_padding
-            {
-                background-origin: padding-box;
-            }
-            .bg_origin_border
-            {
-                background-origin: border-box;
-            }
-            .bg_origin_content
-            {
-                background-origin: content-box;
-            }
+			h3,
+			h4
+			{
+			    padding-left: 30px;
+			}
+			div
+			{
+			    width: 300px;
+			    height: 200px;
+			    margin: 30px;
+			    padding: 20px;
+
+			    border: 20px solid rgb(0, 0, 0);
+			    border: 20px solid rgba(0, 0, 0, .3);
+			    background: orange url('./img/bg_origin.png') no-repeat left top;
+			}
+			.bg_origin_padding
+			{
+			    background-origin: padding-box;
+			}
+			.bg_origin_border
+			{
+			    background-origin: border-box;
+			}
+			.bg_origin_content
+			{
+			    background-origin: content-box;
+			}
         </style>
     </head>
     <body>
-        <h3>默认padding-box</h3>
+        <h3>默认效果与值为padding-box效果一致</h3>
+        <h4>IE8及以下浏览器，background-position的参考原点与background-origin: padding-box表现一致。</h4>
         <div></div>
+        <img src="img/IE7.png" alt="IE7 默认效果" title="IE7 默认效果">
+        <img src="img/IE8.png" alt="IE8 默认效果" title="IE8 默认效果">
         <h3>padding-box</h3>
         <div class="bg_origin_padding"></div>
         <h3>border-box</h3>
