@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>background-attachment</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            div{
+                width: 500px;
+                height: 300px;
+                background-image: url("./img/bg_attachment.jpg");
+                background-repeat: no-repeat;
+                overflow: scroll;
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+                color: yellow;
+            }
+            .bg_attachment_scroll{
+                background-attachment: scroll;
+            }
+            .bg_attachment_fixed{
+                background-attachment: fixed;
+            }
+            .bg_attachment_local{
+                background-attachment: local;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>background-attachment: scroll(IE6+)
+            背景图像相对于元素内容固定，当元素内容滚动时背景图像不会跟着滚动，背景图像总是跟随元素本身，但会随祖先元素或窗体一起滚动。
+        </h3>
+        <div class="bg_attachment_scroll">
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+            <br>
+            background-attachment: scroll
+        </div>
+        <h3>background-attachment: fixed(IE6+)
+            图像相对于可视窗口（viewport）是固定的，始终停留在可是窗口的某一位置.
+        </h3>
+        <div class="bg_attachment_fixed">
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+            <br>
+            background-attachment: fixed
+        </div>
+        <h3>background-attachment: local(IE9+)
+            背景图像相对于元素内容固定，当元素内容滚动时背景图像也会跟着滚动，背景图像总是要跟着内容。
+        </h3>
+        <div class="bg_attachment_local">
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+            <br>
+            background-attachment: local
+        </div>
+    </body>
+</html>
