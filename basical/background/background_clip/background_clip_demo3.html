@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>光影划过文字效果</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            .demo{
+                width: 750px;
+                margin: 30px auto;
+                background: #333 -webkit-linear-gradient(-15deg,#000 5%,rgba(255,255,255,.7),rgba(255,255,255,.9),rgba(255,255,255,.7),#000 10%) no-repeat;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-animation: cliptext 10s linear infinite;
+                font-size: 56px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            @-webkit-keyframes cliptext{
+                0%{
+                    background-position:left 0;
+                }
+                100%{
+                    background-position:1200px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="demo">
+            <p>光影划过文字效果</p>
+        </div>
+    </body>
+</html>
