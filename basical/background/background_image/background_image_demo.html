@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>background-image多组背景图</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link href="" rel="stylesheet">
+        <style>
+            div{
+                width: 1000px;
+                height: 500px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                margin: 0 auto;
+            }
+            .demo{
+                background: url("./img/p_103x196_1.jpg") no-repeat content-box,
+                    url("./img/p_103x196_2.jpg") no-repeat 150px 0 content-box,
+                    url("./img/p_103x196_3.jpg") no-repeat 300px 0 content-box,
+                    url("./img/p_103x196_4.jpg") no-repeat 450px 0 content-box,
+                    url("./img/p_103x196_5.jpg") no-repeat 600px 0 content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="demo"></div>
+    </body>
+</html>
