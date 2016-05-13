@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>text-underline-position</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			ul{
+				margin-top: 10px;
+			}
+			li{
+				text-decoration: underline;
+			}
+			.underline_position_none{
+				-webkit-text-underline-position: auto;
+				text-underline-position: auto;
+			}
+			.underline_position_under{
+				-webkit-text-underline-position: under;
+				text-underline-position: under;
+			}
+			.underline_position_left{
+				-webkit-text-underline-position: left;
+				text-underline-position: left;
+			}
+			.underline_position_right{
+				-webkit-text-underline-position: right;
+				text-underline-position: right;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="underline_position_none">默认auto</li>
+			<li class="underline_position_under">带下划线文字(chrome只支持under)</li>
+			<li class="underline_position_left">带上划线文字</li>
+			<li class="underline_position_right">带贯穿线文字</li>
+		</ul>
+	</body>
+</html>

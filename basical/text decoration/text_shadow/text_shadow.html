@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>text-shadow</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			div{
+				font-size: 20px;
+			}
+			.text_shadow_1{
+				text-shadow: 1px 1px 0 rgba(0, 0, 0, .8);
+				filter: shadow(Color=#000, Direction=180, Strength=0);
+			}
+			.text_shadow_2{
+				color: blue;
+				text-shadow: 1px 1px 0;
+				filter: shadow(Color=blue, Direction=180, Strength=0);
+			}
+			.text_shadow_3{
+				text-shadow: 1px 1px 5px rgba(0, 0, 0, .8);
+				filter: shadow(Color=#000;, Direction=180, Strength=5px);
+			}
+			.text_shadow_4{
+				text-shadow: 1px 1px #fff,
+					2px 2px 2px rgba(0, 0, 0, .3);
+			}
+		</style>
+	</head>
+	<body>
+		<h3>未设置text-shadow效果</h3>
+		<div>未设置text-shadow属性</div>
+		<h3>设置text-shadow效果, IE9及以下浏览器可以使用filter:shadow(F12兼容模式无效, 且IE10也支持)实现。</h3>
+		<div class="text_shadow_1">设置text-shadow属性</div>
+		<h3>未设置text-shadow color，则默认为字体颜色值</h3>
+		<div class="text_shadow_2">未设置text-shadow颜色值</div>
+		<h3>增加text-shadow阴影模糊半径</h3>
+		<div class="text_shadow_3">柔和一点的阴影效果</div>
+		<h3>多重阴影效果</h3>
+		<div class="text_shadow_4">多重阴影效果</div>
+	</body>
+</html>

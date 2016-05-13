@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>text-decoration-skip</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			div{
+				width: 300px;
+				margin-bottom: 10px;
+				text-decoration: underline;
+			}
+			.skip_objects{
+				-webkit-text-decoration-skip: objects;
+				text-decoration-skip: objects;
+			}
+			.skip_spaces{
+				-webkit-text-decoration-skip: spaces;
+				text-decoration-skip: spaces;	
+			}
+			.skip_ink{
+				-webkit-text-decoration-skip: ink;
+				text-decoration-skip: ink;	
+			}
+			.skip_edges{
+				-webkit-text-decoration-skip: edges;
+				text-decoration-skip: edges;	
+			}
+			.skip_box_decoration{
+				-webkit-text-decoration-skip: box-decoration;
+				text-decoration-skip: box-decoration;
+			}
+			.skip_trailing_spaces{
+				-webkit-text-decoration-skip: trailing-spaces;
+				text-decoration-skip: trailing-spaces;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>text-decoration-skip：none  默认效果，装饰线穿过一切，包括本应跳过的内联对象</h3>
+		<div>
+			文本装饰将在<span>每一行</span>都出现.
+		</div>
+		<h3>text-decoration-skip：objects  装饰线略过内联元素（例如图片或inline-block元素）</h3>
+		<div class="skip_objects">
+			文本装饰将在<span>每一行</span>都出现.
+		</div>
+		<h3>text-decoration-skip：spaces 装饰线略过空白：包括常规空白（U+0020）、制表符（U+0009）以及不间断空格（U+00A0）、表意空格（U+3000）、所有固定宽度空格（U+2000至U+200A、U+202F和U+205F）、以及相邻的字母间隔或单词间隔。</h3>
+		<div class="skip_spaces">
+			文本装饰将在 <span>每一行</span> 都出现.
+		</div>
+		<h3>text-decoration-skip：ink 装饰线跳过符号或下沉字母。</h3>
+		<div class="skip_ink">
+			文本装饰(skip)将在<span>每一行</span>都出现.
+		</div>
+		<h3>text-decoration-skip：edges 装饰性起始于内容起始边缘后面，结束语内容结束边缘的前面。这个属性值的目的是为了让两个搞在一起的下划线元素看上去公用一条下划线。这对于中文字体很有用，因为会使用下划线作为标点符号。</h3>
+		<div class="skip_edges">
+			文本装饰(skip)将在<span>每一行</span>都出现.
+		</div>
+		<h3>text-decoration-skip：box-decoration 装饰线跳过继承的margin, border, 以及padding.</h3>
+		<div class="skip_box_decoration">
+			文本装饰(skip)将在<span>每一行</span>都出现.
+		</div>
+		<h3>ext-decoration-skip：trailing-spaces 装饰线跳过pre或white-space: pre-wrap里面前后空格</h3>
+		<div class="skip_trailing_spaces">
+			文本装饰(skip)将在<span>每一行</span>都出现.
+		</div>
+	</body>
+</html>

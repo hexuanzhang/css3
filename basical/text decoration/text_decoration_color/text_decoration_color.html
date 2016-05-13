@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>text-decoration-color</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			ul{
+				margin-top: 10px;
+			}
+			.decoration_color_none{
+				text-decoration: underline;
+				color: blue;
+			}
+			.decoration_color_red{
+				text-decoration: underline;
+				-moz-text-decoration-color: red;
+				-webkit-text-decoration-color: red;
+				text-decoration-color: red;
+			}
+			.decoration_color_blue{
+				text-decoration: underline;
+				-moz-text-decoration-color: blue;
+				-webkit-text-decoration-color: blue;
+				text-decoration-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="decoration_color_none">下划线颜色默认采用文本颜色</li>
+			<li class="decoration_color_red">红色下划线文字</li>
+			<li class="decoration_color_blue">蓝色下划线文字</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>text-decoration</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			ul{
+				margin-top: 10px;
+			}
+			.text_decoration_none{
+				text-decoration: none;
+			}
+			.text_decoration_underline{
+				text-decoration: underline;
+			}
+			.text_decoration_overline{
+				text-decoration: overline;
+			}
+			.text_decoration_lineThrough{
+				text-decoration: line-through;
+			}
+			.text_decoration_blink{
+				text-decoration: blink;
+			}
+			.text_decoration_group{
+				text-decoration: underline overline line-through;
+			}
+			.text_decoration_css3{
+				-webkit-text-decoration:#f00 wavy underline;
+				-moz-text-decoration:#f00 solid underline;
+				text-decoration:#f00 solid underline;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="text_decoration_none">无装饰文字</li>
+			<li class="text_decoration_underline">带下划线文字</li>
+			<li class="text_decoration_overline">带上划线文字</li>
+			<li class="text_decoration_lineThrough">带贯穿线文字</li>
+			<li class="text_decoration_blink">带闪烁文字(已不支持，无效果)</li>
+			<li class="text_decoration_group">多组文本线(IE7+)</li>
+			<li class="text_decoration_css3">如果你的浏览器支持text-decoration在CSS3下的改变，将会看到本行文字有一条红色的下划实线</li>
+		</ul>
+	</body>
+</html>
