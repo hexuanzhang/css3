@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>image-set</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<style>
+			ul {
+			    list-style: none;
+			    font-size: 0;
+			    margin: 20px;
+			}
+			li {
+			    display: inline-block;
+			    width: 32px;
+			    height: 32px;
+			    vertical-align: middle;
+			    border: 1px dotted #eee;
+			    margin: 1px;
+			}
+			#test {
+    			background-image: url(./img/no-image-set.png);
+			    background-image: -webkit-image-set(url(./img/test.png) 1x, url(./img/test-hires.png) 2x);
+			    width: 200px;
+			    height: 75px;
+			}
+			.sprite_icon {
+			    background-image: url(./img/sprite.png);
+			    background-image: -webkit-image-set( url('./img/sprite.png') 1x, url('./img/sprite@2x.png') 2x );
+			}
+		    .icon-1{
+		        background-position:0 0;
+		    }
+		    .icon-2{
+		        background-position:-33px 0;
+		    }
+		    .icon-3{
+		        background-position:-66px 0;
+		    }
+		    .icon-4{
+		        background-position:0 -33px;
+		    }
+		    .icon-5{
+		        background-position:-33px -33px;
+		    }
+		    .icon-6{
+		        background-position:-66px -33px;
+		    }		
+    	</style>
+	</head>
+	<body>
+		<div id="test"></div>
+		<ul>
+            <li class="sprite_icon icon-1"></li>
+            <li class="sprite_icon icon-2"></li>
+            <li class="sprite_icon icon-3"></li>
+            <li class="sprite_icon icon-4"></li>
+            <li class="sprite_icon icon-5"></li>
+            <li class="sprite_icon icon-6"></li>
+        </ul>
+	</body>
+</html>
