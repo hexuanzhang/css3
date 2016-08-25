@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-cn">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=1" >
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <title>首页加载动画</title>
+        <link rel="stylesheet" href="css/demo.css">
+    </head>
+    <body>
+        <div class="welcome-main">
+            <div class="top-info">
+                <div class="wec-img">
+                    <p class="img-con">
+                        <img src="" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.welcome-main').addClass('loading');
+            setTimeout(function(){
+                $('.hi.fst').removeClass('loading');
+                $('.welcome-main').addClass('loaded');
+            },700);
+        </script>
+    </body>
+</html>
